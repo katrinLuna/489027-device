@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Ekaterina Nikitina](https://up.htmlacademy.ru/htmlcss/18/user/489027).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Рычагов](https://htmlacademy.ru/profile/id50483).
 
 ---
 
