@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог товаров: Девайс</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav">
+        <a class="main-header-logo" title="Логотип магазина Device">Device</a>
+        <form class="searching-field" action="/catalog/">
+          <input type="search" placeholder="Поиск по сайту" name="SEARCH">
+        </form>
+        <ul class="main-nav-user">
+          <li class="main-nav-user-auth">Валентин Петухов</li>
+          <li class="main-nav-user-exit"><a href="#">Выйти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
+        <ul class="main-nav-site">
+          <li><a href="catalog.html">Каталог товаров</a>
+            <ul class="main-nav-site-catalog">
+              <li><a href="catalog-page.html">Виртуальная реальность</a></li>
+              <li><a href="catalog-page.html">Моноподы для селфи</a></li>
+              <li><a href="catalog-page.html">Экшн-камеры</a></li>
+              <li><a href="catalog-page.html">Фитнесс браслеты</a></li>
+              <li><a href="catalog-page.html">Умные часы</a></li>
+              <li><a href="catalog-page.html">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="guarantee.html">Гарантия</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h1>Моноподы для селфи</h1>
+      <nav class="nav-breadcrumbs">
+        <ul class="breadcrumbs">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог товаров</a></li>
+          <li class="breadcrumbs-current">Моноподы для селфи</li>
+        </ul>
+      </nav>
+      <aside class="filter-form">
+        <h2>Фильтр:</h2>
+          <!--Формы в принципе разрешил пока не размечать, по сути тут input будут checkbox и radio типов-->
+      </aside>
+
+      <section class="sorting-filter">
+        <h2>Сортировка:</h2>
+          <ul class="sorting-filter-items">
+            <li class="sorting-filter-current"><a href="">По цене</a></li>
+            <li><a href="">По типу</a></li>
+            <li><a href="">По популярности</a></li>
+            <li><a href="">&#9650;</a></li>
+            <li class="sorting-filter-current"><a href="">&#9660;</a></li>
+          </ul>
+      </section>
+
+      <section class="catalog-items-all">
+        <h2 class="visually-hidden">Товары категории "Моноподы для селфи"</h2>
+        <article class="catalog-item">
+          <h3 class="catalog-item-name">Любительская селфи-палка</h3>
+          <a href="#"><img src="jpg/selfie_stick.jpeg" alt="Любительская селфи-палка" width="350" height="450"></a>
+          <b class="catalog-item-price">500 руб.</b>
+        </article>
+      </section>
+
+      <nav class="sec-nav-pagination">
+        <ul class="pagination-items">
+          <li><a href="">Назад</a></li>
+          <li class="pagination-item-current"><a href="">1</a></li>
+          <li><a href="">2</a></li>
+          <li><a href="">3</a></li>
+          <li><a href="">Вперёд</a></li>
+        </ul>
+      </nav>
+    </main>
+
+    <footer class="main-footer">
+      <a class="main-footer-logo" title="Логотип магазина Device">Device</a>
+      <p class="footer-contacts">
+          г. Москва, ул. Строителей, 15
+      </p>
+      <ul class="main-footer-nav-site">
+        <li><a href="delivery.html">Доставка</a></li>
+        <li><a href="guarantee.html">Гарантия</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <div class="main-footer-social">
+        <ul>
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="#">Твиттер</a></li>
+        </ul>
+      </div>
+      <ul class="main-footer-nav-user">
+        <li class="login-link"><a href="authorization.html">Войти</a></li>
+        <li><a href="#">Сравнить</a></li>
+        <li><a href="#">Корзина</a></li>
+      </ul>
+      <p class="main-footer-contacts-tel">
+        <a href="tel:+78126660266">Телефон: +7 (499) 666-02-66</a>
+      </p>
+      <p class="main-footer-copyright">
+        <b>Разработано:</b> <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      </p>
+    </footer>
+
+  </body>
+</html>
