@@ -62,7 +62,7 @@
     </header>
 
     <main class="container">
-      <h1>Моноподы для селфи</h1>
+      <h1 class="h1-title">Моноподы для селфи</h1>
       <nav class="nav-breadcrumbs">
         <ul class="breadcrumbs">
           <li>
@@ -75,12 +75,13 @@
         </ul>
       </nav>
       <aside class="filter-form">
-        <h2>Фильтр:</h2>
-          <!--Формы в принципе разрешил пока не размечать, по сути тут input будут checkbox и radio типов-->
+        <h2 class="h2-title">Фильтр:</h2>
+        <form method="get" action=""><!--Формы в принципе разрешил пока не размечать, по сути тут input будут checkbox и radio типов, для ползунка нужен <input type="range" min="1" max="10"> и разбить на 3 группы <fieldset><legend>Заголовок группы</legend> инпуты внутри</fieldset>-->
+        </form>
       </aside>
 
       <section class="sorting-filter">
-        <h2>Сортировка:</h2>
+        <h2 class="h2-title">Сортировка:</h2>
         <a class="sorting-filter-current" href="#">По цене</a>
         <a href="#">По типу</a>
         <a href="#">По популярности</a>
@@ -91,11 +92,32 @@
       <section class="catalog-items-all">
         <h2 class="visually-hidden">Товары категории "Моноподы для селфи"</h2>
         <article class="catalog-item">
-          <h3 class="catalog-item-name">Любительская селфи-палка</h3>
+          <h3 class="catalog-item-name h3-title">Любительская селфи-палка</h3>
           <a href="#">
-            <img src="jpg/selfie_stick.jpeg" alt="Любительская селфи-палка" width="350" height="450">
+            <img src="img/catalog-items/dilettante-selfstick.jpg" alt="Любительская селфи-палка" title="" width="360" height="380">
           </a>
           <b class="catalog-item-price">500 руб.</b>
+        </article>
+        <article class="catalog-item">
+          <h3 class="catalog-item-name h3-title">Профессиональная селфи-палка</h3>
+          <a href="#">
+            <img src="img/catalog-items/prof-selfstick.jpg" alt="Любительская селфи-палка" title="Любительская селфи-палка" width="360" height="380">
+          </a>
+          <b class="catalog-item-price">1 500 руб.</b>
+        </article>
+        <article class="catalog-item">
+          <h3 class="catalog-item-name h3-title">Непотопляемая селфи-палка</h3>
+          <a href="#">
+            <img src="img/catalog-items/unsinkable-selfstick.jpg" alt="Непотопляемая селфи-палка" title="Непотопляемая селфи-палка" width="360" height="380">
+          </a>
+          <b class="catalog-item-price">2 500 руб.</b>
+        </article>
+        <article class="catalog-item">
+          <h3 class="catalog-item-name h3-title">Селфи-палка &laquo;Следуй за мной&raquo;</h3>
+          <a href="#">
+            <img src="img/catalog-items/follow-me-selfstick.jpg" alt="Селфи-палка «Следуй за мной»" title="Селфи-палка «Следуй за мной»" width="360" height="380">
+          </a>
+          <b class="catalog-item-price">4 900 руб.</b>
         </article>
       </section>
 

@@ -1,0 +1,26 @@
+body{
+  font-size: 15px;
+  line-height: 1.2;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: #000;
+  font-weight: 300;/*light*/
+}
+
+.h1-title {
+  font-size: 47px;
+  line-height: 1.2;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: #000;
+  font-weight: 800;/*extrabold*/
+  letter-spacing: 0.01em;
+}
+
+.h3-title {
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: "Gilroy", "Arial", sans-serif;
+  color: #000;
+  font-weight: 800;/*extrabold*/
+  letter-spacing: 0.01em;
+}
+
