@@ -8,12 +8,16 @@
   <body>
     <header class="main-header">
       <nav class="main-nav">
-        <a class="main-header-logo" title="Логотип магазина Device">Device</a>
+        <a href="index.html" class="main-header-logo" title="Логотип магазина Device">Device</a>
         <form class="searching-field" action="/catalog/">
-          <input type="search" placeholder="Поиск по сайту" name="SEARCH">
+          <label class="visually-hidden" for="search">Поиск по сайту</label>
+          <input type="search" id="search" placeholder="Поиск по сайту" name="SEARCH">
+          <label class="visually-hidden">Найти товар <input class="search-button" type="submit" value="Найти"></label>
         </form>
         <ul class="main-nav-user">
-          <li class="main-nav-user-auth">Валентин Петухов</li>
+          <li class="main-nav-user-auth">
+            <a href="#">Валентин Петухов</a>
+          </li>
           <li class="main-nav-user-exit">
             <a href="#">Выйти</a>
           </li>
@@ -74,9 +78,68 @@
           <li class="breadcrumbs-current">Моноподы для селфи</li>
         </ul>
       </nav>
-      <aside class="filter-form">
+      <aside class="filters">
         <h2 class="h2-title">Фильтр:</h2>
-        <form method="get" action=""><!--Формы в принципе разрешил пока не размечать, по сути тут input будут checkbox и radio типов, для ползунка нужен <input type="range" min="1" max="10"> и разбить на 3 группы <fieldset><legend>Заголовок группы</legend> инпуты внутри</fieldset>-->
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset>
+            <legend>Стоимость</legend>
+              <label for="price-gap" class="visually-hidden">Выбрать диапазон цены товаров</label>
+              <input type="range" name="range" id="price-gap"><!--ходят слухи, что он для стилизации тяжелый и лучше просто как декоративный элемент нарисовать?-->
+              <span>от 0 </span><span>до 5000</span>
+          </fieldset>
+          <fieldset>
+            <legend>Цвет</legend>
+             <ul>
+                <li class="filter-option">
+                  <label>
+                    <input type="checkbox" name="black">
+                    Черный
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label>
+                    <input type="checkbox" name="white">
+                    Белый
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label>
+                    <input type="checkbox" name="blue">
+                    Синий
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label>
+                    <input type="checkbox" name="red">
+                    Красный
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label>
+                    <input type="checkbox" name="pink">
+                    Розовый
+                  </label>
+                </li>
+             </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Bluetooth</legend>
+              <ul>
+                <li class="filter-option">
+                  <label>
+                    <input type="radio" name="bluetooth" value="yes">
+                    Есть
+                  </label>
+                </li>
+                <li class="filter-option">
+                  <label>
+                    <input type="radio" name="bluetooth" value="no">
+                    Нет
+                  </label>
+                </li>
+              </ul>
+          </fieldset>
+          <button type="submit" class="filter-button button">Показать</button>
         </form>
       </aside>
 
@@ -92,32 +155,48 @@
       <section class="catalog-items-all">
         <h2 class="visually-hidden">Товары категории "Моноподы для селфи"</h2>
         <article class="catalog-item">
-          <h3 class="catalog-item-name h3-title">Любительская селфи-палка</h3>
           <a href="#">
+            <h3 class="catalog-item-name h3-title">Любительская селфи-палка</h3>
             <img src="img/catalog-items/dilettante-selfstick.jpg" alt="Любительская селфи-палка" title="Любительская селфи-палка" width="360" height="380">
           </a>
           <b class="catalog-item-price">500 руб.</b>
+          <div class="adding-to-cart">
+            <button type="submit" class="button but-cart">В корзину</button>
+            <button type="submit" class="but-compare">Добавить к сравнению</button>
+          </div>
         </article>
         <article class="catalog-item">
-          <h3 class="catalog-item-name h3-title">Профессиональная селфи-палка</h3>
           <a href="#">
+            <h3 class="catalog-item-name h3-title">Профессиональная селфи-палка</h3>
             <img src="img/catalog-items/prof-selfstick.jpg" alt="Профессиональная селфи-палка" title="Профессиональная селфи-палка" width="360" height="380">
           </a>
           <b class="catalog-item-price">1 500 руб.</b>
+          <div class="adding-to-cart">
+            <button type="submit" class="button but-cart">В корзину</button>
+            <button type="submit" class="but-compare">Добавить к сравнению</button>
+          </div>
         </article>
         <article class="catalog-item">
-          <h3 class="catalog-item-name h3-title">Непотопляемая селфи-палка</h3>
           <a href="#">
+            <h3 class="catalog-item-name h3-title">Непотопляемая селфи-палка</h3>
             <img src="img/catalog-items/unsinkable-selfstick.jpg" alt="Непотопляемая селфи-палка" title="Непотопляемая селфи-палка" width="360" height="380">
           </a>
           <b class="catalog-item-price">2 500 руб.</b>
+          <div class="adding-to-cart">
+            <button type="submit" class="button but-cart">В корзину</button>
+            <button type="submit" class="but-compare">Добавить к сравнению</button>
+          </div>
         </article>
         <article class="catalog-item">
-          <h3 class="catalog-item-name h3-title">Селфи-палка &laquo;Следуй за мной&raquo;</h3>
           <a href="#">
+            <h3 class="catalog-item-name h3-title">Селфи-палка &laquo;Следуй за мной&raquo;</h3>
             <img src="img/catalog-items/follow-me-selfstick.jpg" alt="Селфи-палка «Следуй за мной»" title="Селфи-палка «Следуй за мной»" width="360" height="380">
           </a>
           <b class="catalog-item-price">4 900 руб.</b>
+          <div class="adding-to-cart">
+            <button type="submit" class="button but-cart">В корзину</button>
+            <button type="submit" class="but-compare">Добавить к сравнению</button>
+          </div>
         </article>
       </section>
 

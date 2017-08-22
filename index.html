@@ -10,8 +10,9 @@
       <nav class="main-nav">
         <a class="main-header-logo" title="Логотип магазина Device">Device</a>
         <form class="searching-field" action="/catalog/">
-          <input type="search" placeholder="Поиск по сайту" name="SEARCH">
-          <!--<input class="search-button" type="submit"> нужен ли? если с enter поиск будет происходить? или делать submit скрытый-->
+          <label class="visually-hidden" for="search">Поиск по сайту</label>
+          <input type="search" id="search" placeholder="Поиск по сайту" name="SEARCH">
+          <label class="visually-hidden">Найти товар <input class="search-button" type="submit" value="Найти"></label>
         </form>
         <ul class="main-nav-user">
           <li class="login-link">
@@ -65,12 +66,12 @@
       <h1 class="visually-hidden">Он-лайн магазин восхитительных вещей Device</h1>
       <section class="slider-promo">
         <h2 class="visually-hidden">Популярные промо-товары</h2>
-        <input id="button-1promo" name="controls" type="radio" checked>
-        <label class="slider-promo-controls-current" for="button-1promo"></label>
-        <input id="button-2promo" name="controls" type="radio">
-        <label class="slider-promo-controls" for="button-2promo"></label>
-        <input id="button-3promo" name="controls" type="radio">
-        <label class="slider-promo-controls" for="button-3promo"></label>
+        <label class="slider-promo-controls-current visually-hidden" for="button-1promo">Переключить слайд</label>
+        <input id="button-1promo" name="controls-promo" type="radio" checked>
+        <label class="slider-promo-controls visually-hidden" for="button-2promo">Переключить слайд</label>
+        <input id="button-2promo" name="controls-promo" type="radio">
+        <label class="slider-promo-controls visually-hidden" for="button-3promo">Переключить слайд</label>
+        <input id="button-3promo" name="controls-promo" type="radio">
         <ul class="slider-promo-slideshow">
           <li class="slider-promo-slideshow-inner">
             <a class="slider-promo-img" href="#">
@@ -134,32 +135,29 @@
 
       <section class="slider-services">
         <h2 class="visually-hidden">Наши сервисы</h2>
-        <input id="button-1serv" name="controls" type="radio" checked>
-        <label class="slider-services-controls-current" for="button-1serv" class="button">Доставка</label>
-        <input id="button-2serv" name="controls" type="radio">
-        <label class="slider-services-controls" for="button-2serv" class="button">Гарантия</label>
-        <input id="button-3serv" name="controls" type="radio">
-        <label class="slider-services-controls" for="button-3serv" class="button">Кредит</label>
+        <label class="slider-services-controls-current button">
+        Доставка
+        <input id="button-1serv" value="button-1serv" name="controls" type="radio" checked>
+        </label>
+        <label class="slider-services-controls button" for="button-2serv">
+        Гарантия
+        <input id="button-2serv" value="button-2serv" name="controls" type="radio">
+        </label>
+        <label class="slider-services-controls button" for="button-3serv">Кредит <input id="button-3serv" value="button-3serv" name="controls" type="radio"></label>
         <div class="slider-services-block">
             <p class="slider-services-head">Доставка</p>
             <p class="slider-services-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Веды мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            <a class="slider-services-img" href="#" >
-              <img src="img/svg/" alt="Доставка быстро! Мы уже в пути!">
-            </a>
+            <img src="img/svg/" alt="Доставка быстро! Мы уже в пути!">
         </div>
         <div class="slider-services-block">
             <p class="slider-services-head">Гарантия</p>
             <p class="slider-services-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.Товар, не дом, конечно же.</p>
-            <a class="slider-services-img" href="#">
-              <img src="img/svg/" alt="Надежная гарантия">
-            </a>
+            <img src="img/svg/" alt="Надежная гарантия">
         </div>
         <div class="slider-services-block">
             <p class="slider-services-head">Кредит</p>
             <p class="slider-services-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-            <a class="slider-services-img" href="#" >
-              <img src="img/svg/" alt="Ура! Восхитительный кредит!">
-            </a>
+            <img src="img/svg/" alt="Ура! Восхитительный кредит!">
         </div>
       </section>
 
@@ -195,7 +193,7 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <iframe width="400" height="250" src="https://www.google.com/maps/embed/v1/place"></iframe>
-        <a class="button contacts-modal" href="#">Напишите нам</a>
+        <button class="button contacts-modal" type="button">Напишите нам</button>
       </section>
     </main>
 
@@ -242,24 +240,32 @@
       </p>
       <p class="main-footer-copyright">
         <b>Разработано:</b>
-        <a class="button" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
       </p>
     </footer>
 
     <section class="modal modal-contact-us">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
       <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
-        <input type="text" name="">
-        <input type="email" name="">
-        <input type="text" name="">
+        <label>
+          Ваше имя:
+          <input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+        </label>
+        <label>
+          Ваш e-mail:
+          <input type="email" name="e-mail" placeholder="Для отправки ответа">
+        </label>
+        <label for="textarea">Текст письма</label>
+        <textarea id="textarea">В свободной форме</textarea>
         <button class="button" type="submit">Отправить</button>
       </form>
-      <span class="modal-close">x</span>
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span> Х</button>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img src="img/modal-map/map-big.jpg" alt="Магазин Device легко найти по этой карте" title="Магазин Device легко найти по этой карте" width="960" height="559">
-      <span class="modal-close">x</span>
+      <img src="img/modal-map/map-big.jpg" alt="Магазин Device легко найти по адресу г. Москва, ул. Строителей, 15" title="Магазин Device легко найти по адресу г. Москва, ул. Строителей, 15" width="960" height="559">
+      <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span> Х</button>
     </section>
 
   </body>
