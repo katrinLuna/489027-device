@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин товаров: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-nav">
-        <a class="main-header-logo" title="Логотип магазина Device">Device</a>
-        <form class="searching-field" action="/catalog/">
+        <a class="main-header-logo" title="Логотип магазина Device">Device</a><!--Или тут картинкой всё-таки лучше?-->
+        <form class="searching-form" action="/catalog/">
           <label class="visually-hidden" for="search">Поиск по сайту</label>
-          <input type="search" id="search" placeholder="Поиск по сайту" name="SEARCH">
-          <label class="visually-hidden">Найти товар <input class="search-button" type="submit" value="Найти"></label>
+          <input id="search" class="search-field" type="search"  placeholder="Поиск по сайту" name="SEARCH">
+          <label class="visually-hidden" for="search-button">Найти товар</label>
+          <input id="search-button" class="search-button" type="submit" value="Найти">
         </form>
         <ul class="main-nav-user">
           <li class="login-link">
@@ -77,7 +80,7 @@
             <a class="slider-promo-img" href="#">
               <img src="img/slider-promo/selfie.png" alt="Селфи палка шикарная" title="Селфи палка шикарная" width="388" height="486">
             </a>
-            <span class="slider-promo-slogan">Делай селфи, как Бен Стиллер!</span>
+            <span class="slider-promo-slogan">Делай селфи,<br> как Бен Стиллер!</span>
             <p class="slider-promo-description">Самая длинная палка для селфи доступна в нашем магазине Восемь (Восемь, Карл!) метров длинной и весом всего 5 килограмм</p>
             <a class="button slider-promo-read-more" href="#">Подробнее</a>
             <table class="slider-promo-details">
@@ -151,7 +154,7 @@
         </div>
         <div class="slider-services-block">
             <p class="slider-services-head">Гарантия</p>
-            <p class="slider-services-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.Товар, не дом, конечно же.</p>
+            <p class="slider-services-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
             <img src="img/svg/" alt="Надежная гарантия">
         </div>
         <div class="slider-services-block">
@@ -174,11 +177,11 @@
         </a>
         <a href="http://partners.ru">
           <img class="partners-logo" src="img/partners/vive.jpg" alt="Логотип компании Vive" title="Логотип компании Vive" width="260" height="100">
-        </a>/
+        </a>
       </section>
 
       <section class="about-us">
-        <h2>О нас</h2>
+        <h2 class="h2-title">О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
         <ul class="about-us-list">
@@ -190,7 +193,7 @@
       </section>
 
       <section class="contacts">
-        <h2>Контакты</h2>
+        <h2 class="h2-title">Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <iframe width="400" height="250" src="https://www.google.com/maps/embed/v1/place"></iframe>
         <button class="button contacts-modal" type="button">Напишите нам</button>

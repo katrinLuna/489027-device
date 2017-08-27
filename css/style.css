@@ -1,26 +1,699 @@
-body{
-  font-size: 15px;
-  line-height: 1.2;
-  font-family: "Open Sans", "Arial", sans-serif;
-  color: #000;
-  font-weight: 300;/*light*/
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/opensans.woff") format("woff"), url("fonts/gopensans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "Open Sans light";
+  src: url("fonts/opensanslight.woff") format("woff"), url("fonts/opensanslight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/gilroyextrabold.woff") format("woff"), url("fonts/gilroyextrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/gilroylight.woff") format("woff"), url("fonts/gilroylight.woff") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 300;/*light*/
+  color: #000;
+
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+
+  width: 220px;
+  height: 29px;
+  padding-top: 11px;
+
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 800;/*extrabold*/
+  color: #000;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 18px;
+  left: 0;
+
+  height: 8px;
+  width: 100%;
+
+  background-color: #f0c52e;
+}
+
+.button:hover::before {
+  top:0;
+  height: 40px;
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+button.button{
+  background-color: transparent;
+  border: none;
+}
+
+/*start style for <header> .main-header*/
+
+.main-header {
+  width: 1160px;
+  background-color: #f7e296;
+}
+
+.main-header-logo{
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 800;/*extrabold*/
+  color: #000;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.main-header-logo{
+
+
+}
+
+.search-field:focus .searching-form {
+  border-bottom: 2px solid #000;
+}
+
+.search-button {
+  background-color: #f7e296;
+  border: 1px solid #000;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+.search-button:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.main-nav-user {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+.main-nav-user,
+ul.main-nav-site-catalog {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  text-transform: none;
+
+  list-style: none;
+}
+
+.main-nav-site > li:not(.main-nav-site-catalog) {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 800;/*extrabold*/
+  color: #000;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  list-style: none;
+}
+
+.main-nav-user a,
+.main-nav-site a {
+  color: #000;
+}
+
+.main-header-logo:hover,
+.main-header-logo:focus,
+.main-nav-user a:hover,
+.main-nav-user a:focus,
+.main-nav-site a:hover,
+.main-nav-site a:focus {
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.main-header-logo:active,
+.main-nav-user a:active,
+.main-nav-site a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*end style for <header> .main-header*/
+
+
+/*start style for <main>*/
+
 .h1-title {
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
   line-height: 1.2;
-  font-family: "Gilroy", "Arial", sans-serif;
-  color: #000;
   font-weight: 800;/*extrabold*/
+  color: #000;
+  letter-spacing: 0.01em;
+}
+
+.h2-title {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 1.2;
+  font-weight: 800;/*extrabold*/
+  color: #000;
   letter-spacing: 0.01em;
 }
 
 .h3-title {
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 1.2;
-  font-family: "Gilroy", "Arial", sans-serif;
+  font-weight: 800;/*extrabold*/
   color: #000;
+  letter-spacing: 0.01em;
+}
+
+/*start style for .slider-promo*/
+
+.slider-promo-slideshow {
+  list-style: none;
+}
+
+.slider-promo-slogan {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 1.2;
+  font-weight: 800;/*extrabold*/
+  color: #000;
+  letter-spacing: 0.01em;
+}
+
+.slider-promo-description {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+.slider-promo-details td:not(:last-child) {
+  padding-right: 80px;
+  text-align: left;
+}
+
+.slider-promo-details tr:first-child {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #000;
+  letter-spacing: 0.01em;
+}
+
+.slider-promo-details tr:nth-child(2) {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+/*end style for .slider-promo*/
+
+
+/*start style for .slider-services*/
+
+/*.slider-services{
+  background-color: #e5e5e5;
+}фон перекрывает заливку в before для кнопок, пока не знаю как пофиксить*/
+
+section.slider-services .button:active {
+  width: 278px;
+  padding-left: 25px;
+  color: #f7e184;
+  text-align: left;
+  background-color: #000;
+}
+
+.slider-services-head {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 47px;
+  line-height: 1.2;
+  font-weight: 800;/*extrabold*/
+  color: #000;
+  letter-spacing: 0.01em;
+}
+
+.slider-services-description {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+
+}
+
+/*end style for .slider-services*/
+
+
+/*start style for .catalog-preview*/
+.catalog-preview ul {
+  list-style-type: none;
+}
+
+/*.catalog-preview li{
+  display: inline-block;
+  width: 160px;
+  vertical-align: top;
+}
+
+.catalog-preview li:not(:last-child){
+  margin-right: 40px;
+}
+
+Переделать на флексах, но если что, вот решение*/
+
+.catalog-preview a::before {
+  content: "";
+  display: inline-block;
+
+  width: 160px;
+  height: 160px;
+
+  background-color: #f7e296;
+}
+
+.catalog-preview li:hover a::before,
+.catalog-preview li:focus a::before {
+  background-color: #f0c52e;
+  cursor: pointer;
+}
+
+/*end style for .catalog-preview*/
+
+
+/*start style for .partners-dillers*/
+
+img.partners-logo {
+  filter: grayscale(100%);
+}
+
+img.partners-logo:hover {
+  filter: none;
+}
+
+/*end style for .partners-dillers*/
+
+
+/*start style for .about-us and .contacts*/
+
+.about-us p,
+.contacts p {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.about-us-list {
+  list-style-type: none;
+
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;/*extrabold*/
+  color: #000;
+}
+
+.about-us-button {
+  width: 260px;
+}
+
+/*end style for main*/
+
+
+/*style for <footer> .main-footer*/
+
+.main-footer {
+  background-color: #464646;
+  color: #fff;
+}
+
+.main-footer ul {
+    list-style-type: none;
+}
+
+.main-footer-logo {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 800;/*extrabold*/
+  color: #ffc600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.main-footer-logo:hover,
+.main-footer-logo:focus {
+  color: rgba(255, 198, 0, 0.6);
+  cursor: pointer;
+}
+
+.main-footer-logo:active {
+  color: rgba(255, 198, 0, 0.3);
+}
+
+.footer-contacts {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.main-footer-nav-site {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 800;/*extrabold*/
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.main-footer-nav-site a {
+  color: #fff;
+}
+
+.main-footer-nav-user,
+.main-footer-contacts-tel {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+}
+
+.main-footer-nav-user {
+  letter-spacing: 0.01em;
+}
+
+.main-footer-nav-user a,
+.main-footer-contacts-tel a {
+  color: #fff;
+}
+
+.main-footer-nav-user a:hover,
+.main-footer-nav-user a:focus,
+.main-footer-nav-site a:hover,
+.main-footer-nav-site a:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.main-footer-nav-user a:active,
+.main-footer-nav-site a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/*end for <footer> .main-footer*/
+
+
+/*start style for .modal-contact-us*/
+.modal-contact-us label {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 800;/*extrabold*/
+}
+
+.modal-contact-us input,
+.modal-contact-us textarea {
+  background-color: #f2f2f2;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(70, 70, 70, 0.4);
+}
+
+button.modal-close{
+  color: #fff;
+  background-color: #f7e296;
+  border: none;
+  cursor: pointer;
+}
+
+button.modal-close:hover{
+  background-color: #f0c52e;
+}
+
+button.modal-close:active {
+  background-color: #faedc0;
+}
+
+/*end style for .modal-contact-us*/
+
+
+/*start style for INNER PAGE catalog.html*/
+
+/*start style for .nav-breadcrumbs*/
+.nav-breadcrumbs ul {
+  list-style-type: none;
+}
+
+.nav-breadcrumbs li,
+.nav-breadcrumbs a {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 36px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.01em;
+}
+
+.nav-breadcrumbs a:hover,
+.nav-breadcrumbs a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+/*end style for .nav-breadcrumbs*/
+
+
+/*start style for <aside> .filters*/
+
+.h2-title-filter,
+.h2-title-sorting {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 800;/*extrabold*/
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.h2-title-filter {
+  background-color: #dbdbdb;
+}
+
+form.filter {
+    background-color: #eee;
+}
+
+.filter ul{
+  list-style-type: none;
+}
+
+.filter fieldset {
+  border-top: 1px solid #000;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.filter legend{
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
   font-weight: 800;/*extrabold*/
   letter-spacing: 0.01em;
 }
+
+.filter-option label{
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 300;
+  color: #000;
+  letter-spacing: 0.01em;
+}
+/*end style for <aside> .filters*/
+
+
+/*start style for .sorting-filter*/
+
+.sorting-filters{
+  background-color: #ebebeb;
+}
+
+.sorting-filters a {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-filters .current {
+  color: #000;
+}
+
+.sorting-filters a:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting-filters a:active{
+  color: #000;
+}
+
+/*end style for .sorting-filter*/
+
+
+/*start style for .catalog-items-all*/
+
+.catalog-item-price{
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #464646;
+  letter-spacing: 0.01em;
+}
+
+button.but-compare{
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 36px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.01em;
+
+  border: none;
+  background-color: transparent;
+}
+
+/*end style for .catalog-items-all*/
+
+
+/*start style for catalog-pagination*/
+.catalog-pagination{
+  background-color: #ebebeb;
+}
+
+.catalog-pagination ul{
+  list-style-type: none;
+}
+
+.catalog-pagination a {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+}
+
+.catalog-pagination a.current,
+.catalog-pagination a.back-but,
+.catalog-pagination a.ahead-but {
+  color: #000;
+}
+
+.catalog-pagination a.back-but:hover,
+.catalog-pagination a.back-but:focus,
+.catalog-pagination a.ahead-but:hover,
+.catalog-pagination a.ahead-but:focus {
+  background-color: #d9d9d9;
+}
+
+.catalog-pagination a.back-but:active,
+.catalog-pagination a.ahead-but:active{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*end style for catalog-pagination*/
+
+
+/*end style for INNER PAGE catalog.html*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*start style for catalog-pagination*/
+/*end style for catalog-pagination*/
 
