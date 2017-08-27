@@ -107,11 +107,6 @@ button.button{
   text-transform: uppercase;
 }
 
-.main-header-logo{
-
-
-}
-
 .search-field:focus .searching-form {
   border-bottom: 2px solid #000;
 }
@@ -676,24 +671,3 @@ button.but-compare{
 
 
 /*end style for INNER PAGE catalog.html*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*start style for catalog-pagination*/
-/*end style for catalog-pagination*/
-
