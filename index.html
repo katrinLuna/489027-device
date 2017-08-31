@@ -3,33 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин товаров: Девайс</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+  <div class="flex-conteiner">
     <header class="main-header">
       <nav class="main-nav">
-        <a class="main-header-logo" title="Логотип магазина Device">Device</a><!--Или тут картинкой всё-таки лучше?-->
-        <form class="searching-form" action="/catalog/">
-          <label class="visually-hidden" for="search">Поиск по сайту</label>
-          <input id="search" class="search-field" type="search"  placeholder="Поиск по сайту" name="SEARCH">
-          <label class="visually-hidden" for="search-button">Найти товар</label>
-          <input id="search-button" class="search-button" type="submit" value="Найти">
-        </form>
-        <ul class="main-nav-user">
-          <li class="login-link">
-            <a href="authorization.html">Войти</a>
-          </li>
-          <li>
-            <a href="#">Сравнить</a>
-          </li>
-          <li>
-            <a href="#">Корзина</a>
-          </li>
-        </ul>
+        <a class="main-header-logo" title="Логотип магазина Device">Device</a>
+        <div class="header-flex-row">
+          <form class="searching-form" action="/catalog/">
+            <label class="visually-hidden" for="search">Поиск по сайту</label>
+            <input id="search" class="search-field" type="search"  placeholder="Поиск по сайту" name="SEARCH">
+            <label class="visually-hidden" for="search-button">Найти товар</label>
+            <input id="search-button" class="search-button" type="submit" value="Найти">
+          </form>
+          <ul class="main-nav-user">
+            <li class="login-link">
+              <a href="authorization.html">Войти</a>
+            </li>
+            <li>
+              <a href="#">Сравнить</a>
+            </li>
+            <li>
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
         <ul class="main-nav-site">
-          <li>
+          <li class="open-sub-menu">
             <a href="catalog.html">Каталог товаров</a>
             <ul class="main-nav-site-catalog">
               <li>
@@ -65,44 +67,46 @@
       </nav>
     </header>
 
-    <main class="container">
+    <main class="main-container">
       <h1 class="visually-hidden">Он-лайн магазин восхитительных вещей Device</h1>
       <section class="slider-promo">
         <h2 class="visually-hidden">Популярные промо-товары</h2>
-        <label class="slider-promo-controls-current visually-hidden" for="button-1promo">Переключить слайд</label>
-        <input id="button-1promo" name="controls-promo" type="radio" checked>
-        <label class="slider-promo-controls visually-hidden" for="button-2promo">Переключить слайд</label>
-        <input id="button-2promo" name="controls-promo" type="radio">
-        <label class="slider-promo-controls visually-hidden" for="button-3promo">Переключить слайд</label>
-        <input id="button-3promo" name="controls-promo" type="radio">
         <ul class="slider-promo-slideshow">
           <li class="slider-promo-slideshow-inner">
             <a class="slider-promo-img" href="#">
               <img src="img/slider-promo/selfie.png" alt="Селфи палка шикарная" title="Селфи палка шикарная" width="388" height="486">
             </a>
-            <span class="slider-promo-slogan">Делай селфи,<br> как Бен Стиллер!</span>
-            <p class="slider-promo-description">Самая длинная палка для селфи доступна в нашем магазине Восемь (Восемь, Карл!) метров длинной и весом всего 5 килограмм</p>
-            <a class="button slider-promo-read-more" href="#">Подробнее</a>
-            <table class="slider-promo-details">
-              <tr>
-                <td>8,5 м</td>
-                <td>5 кг</td>
-                <td>Карбон</td>
-              </tr>
-              <tr>
-                <td>Длина палки</td>
-                <td>Вес палки</td>
-                <td>Материал</td>
-              </tr>
-            </table>
+            <div class="slider-flex-combine">
+              <span class="slider-promo-slogan">Делай селфи,<br> как Бен Стиллер!</span>
+              <p class="slider-promo-description">Самая длинная палка для селфи доступна в нашем магазине Восемь (Восемь, Карл!) метров длинной и весом всего 5 килограмм</p>
+              <a class="button slider-promo-read-more" href="#">Подробнее</a>
+              <label class="slider-promo-controls-current visually-hidden" for="button-1promo">Переключить слайд</label>
+              <input id="button-1promo" name="controls-promo" type="radio" checked>
+              <label class="slider-promo-controls visually-hidden" for="button-2promo">Переключить слайд</label>
+              <input id="button-2promo" name="controls-promo" type="radio">
+              <label class="slider-promo-controls visually-hidden" for="button-3promo">Переключить слайд</label>
+              <input id="button-3promo" name="controls-promo" type="radio">
+              <table class="slider-promo-details">
+                <tr>
+                  <td>8,5 м</td>
+                  <td>5 кг</td>
+                  <td>Карбон</td>
+                </tr>
+                <tr>
+                  <td>Длина палки</td>
+                  <td>Вес палки</td>
+                  <td>Материал</td>
+                </tr>
+              </table>
+            </div>
           </li>
-        <!--Нижний слайдер по вашей рекомендации убрала из списка, а имеет смысл список ту оставлять?-->
+        <!--Нижний слайдер убрала из списка, а имеет смысл список ту оставлять?-->
         </ul>
       </section>
 
       <section class="catalog-preview">
         <h2 class="visually-hidden">Каталог товаров по разделам</h2>
-        <ul>
+        <ul class="catalog-preview-flex">
           <li class="catalog-preview-caption">
             <a href="catalog-page.html">
               <h3 class="h3-title">Виртуальная реальность</h3>
@@ -138,15 +142,23 @@
 
       <section class="slider-services">
         <h2 class="visually-hidden">Наши сервисы</h2>
-        <label class="slider-services-controls-current button">
-        Доставка
-        <input id="button-1serv" value="button-1serv" name="controls" type="radio" checked>
-        </label>
-        <label class="slider-services-controls button" for="button-2serv">
-        Гарантия
-        <input id="button-2serv" value="button-2serv" name="controls" type="radio">
-        </label>
-        <label class="slider-services-controls button" for="button-3serv">Кредит <input id="button-3serv" value="button-3serv" name="controls" type="radio"></label>
+        <ul class="slider-services-controls">
+          <li>
+            <label class="slider-services-control-current button">
+            Доставка
+            <input id="button-1serv" value="button-1serv" name="controls" type="radio" checked>
+            </label>
+          </li>
+          <li>
+            <label class="slider-services-control button" for="button-2serv">
+            Гарантия
+            <input id="button-2serv" value="button-2serv" name="controls" type="radio">
+            </label>
+          </li>
+          <li>
+            <label class="slider-services-control button" for="button-3serv">Кредит <input id="button-3serv" value="button-3serv" name="controls" type="radio"></label>
+          </li>
+        </ul>
         <div class="slider-services-block">
             <p class="slider-services-head">Доставка</p>
             <p class="slider-services-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Веды мы неплохо заработаем, поднимая его на ваш этаж.</p>
@@ -180,6 +192,7 @@
         </a>
       </section>
 
+      <div class="flex-combine-aboutus-conacts">
       <section class="about-us">
         <h2 class="h2-title">О нас</h2>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -198,53 +211,64 @@
         <iframe width="400" height="250" src="https://www.google.com/maps/embed/v1/place"></iframe>
         <button class="button contacts-modal" type="button">Напишите нам</button>
       </section>
+      </div>
     </main>
+  </div><!--close div .flex-conteiner-->
+
 
     <footer class="main-footer">
-      <a class="main-footer-logo" title="Логотип магазина Device">Device</a>
-      <p class="footer-contacts">г. Москва, ул. Строителей, 15</p>
-      <ul class="main-footer-nav-site">
-        <li>
-          <a href="delivery.html">Доставка</a>
-        </li>
-        <li>
-          <a href="guarantee.html">Гарантия</a>
-        </li>
-        <li>
-          <a href="contacts.html">Контакты</a>
-        </li>
-      </ul>
-      <div class="main-footer-social">
-        <ul>
-          <li>
-            <a class="social-button" href="#">Фейсбук</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Инстаграм</a>
-          </li>
-          <li>
-            <a class="social-button" href="#">Твиттер</a>
-          </li>
-        </ul>
+      <div class="flex-conteiner-main-footer">
+        <div class="main-footer-flex-column-1">
+          <a class="main-footer-logo" title="Логотип магазина Device">Device</a>
+          <p class="footer-contacts">г. Москва, ул. Строителей, 15</p>
+        </div>
+        <div class="main-footer-flex-column-2">
+          <ul class="main-footer-nav-site">
+            <li>
+              <a href="delivery.html">Доставка</a>
+            </li>
+            <li>
+              <a href="guarantee.html">Гарантия</a>
+            </li>
+            <li>
+              <a href="contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <div class="main-footer-social">
+            <ul>
+              <li>
+                <a class="social-button" href="#">Фейсбук</a>
+              </li>
+              <li>
+                <a class="social-button" href="#">Инстаграм</a>
+              </li>
+              <li>
+                <a class="social-button" href="#">Твиттер</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main-footer-flex-column-3">
+          <ul class="main-footer-nav-user">
+            <li class="login-link">
+              <a href="authorization.html">Войти</a>
+            </li>
+            <li>
+              <a href="#">Сравнить</a>
+            </li>
+            <li>
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+          <p class="main-footer-contacts-tel">
+            <a href="tel:+78126660266">Телефон: +7 (499) 666-02-66</a>
+          </p>
+          <p class="main-footer-copyright">
+            <b>Разработано:</b>
+            <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+          </p>
+        </div>
       </div>
-      <ul class="main-footer-nav-user">
-        <li class="login-link">
-          <a href="authorization.html">Войти</a>
-        </li>
-        <li>
-          <a href="#">Сравнить</a>
-        </li>
-        <li>
-          <a href="#">Корзина</a>
-        </li>
-      </ul>
-      <p class="main-footer-contacts-tel">
-        <a href="tel:+78126660266">Телефон: +7 (499) 666-02-66</a>
-      </p>
-      <p class="main-footer-copyright">
-        <b>Разработано:</b>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-      </p>
     </footer>
 
     <section class="modal modal-contact-us">

@@ -29,15 +29,271 @@
 body {
   margin: 0;
   padding: 0;
+  min-width:1200px;
 
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
-  line-height: 1.2;
   font-weight: 300;/*light*/
   color: #000;
 
   background-color: #fff;
 }
+
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}/*Extends the .visually-hidden class to allow the element to be focusable when navigated to via the keyboard
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}*/
+
+
+
+/*start styles for FLEX-grid*/
+.flex-conteiner{
+  width: 1160px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.main-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-flex-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.main-nav-site{
+  display: flex;
+   justify-content: space-between;
+   padding-left: 0px;
+}
+
+
+.slider-promo-slideshow-inner{
+  display: flex;
+}
+
+.slider-promo-img{
+  flex-basis: 600px;
+}
+
+.slider-flex-combine{
+  flex-basis: 600px;
+}
+
+
+.catalog-preview{
+  margin-top: 90px;
+}
+
+.catalog-preview-flex{
+  display: flex;
+  justify-content: space-between;
+
+  margin-left: 0px;
+  padding-left: 0px;
+
+}
+
+.catalog-preview-caption{
+  flex-basis: 160px;
+}
+
+
+.slider-services{
+  display: flex;
+  align-items: flex-start;
+
+  height: 390px;
+
+  margin-top: 65px;
+  outline: 1px solid red;
+}
+
+ul.slider-services-controls{
+  flex-basis: 284px;
+  margin-right: 116px;
+}
+
+.slider-services-block{
+  flex-basis: 759px;
+}
+
+.slider-services-block:not(:first-of-type){
+  display: none;
+}
+
+
+.partners-dillers{
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 95px;
+}
+
+
+.flex-combine-aboutus-conacts{
+  display: flex;
+
+  height: 563px;
+  margin-top: 90px;
+
+  outline: 1px solid red;
+}
+
+.about-us{
+  flex-basis: 470px;
+  margin-right: auto;
+}
+
+.contacts {
+  flex-basis: 560px;
+}
+
+.flex-conteiner-main-footer{
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:60px;
+}
+
+.main-footer-flex-column-1{
+  flex-basis: 368px;
+}
+
+.main-footer-flex-column-2{
+  flex-basis: 430px;
+}
+
+.main-footer-flex-column-3{
+  flex-basis: 328px;
+  margin-left: auto;
+}
+
+.flex-conteiner-main-footer ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+.main-header.inner-page {
+   height: 210px;
+   margin-bottom: 35px;
+}
+
+.flex-conteiner-h1-breadcrump{
+  box-sizing: border-box;
+
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 60px;
+}
+
+.breadcrumbs{
+  padding-left:0px;
+
+  margin-bottom: 50px;
+}
+
+.breadcrumbs li{
+  display: inline;
+}
+
+.flex-catalog-columns{
+  display: flex;
+
+  box-sizing: border-box;
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-left: 60px;
+}
+
+.filters{
+  flex-basis: 200px;
+  padding-right: 70px;
+}
+
+.flex-catalog-column-items{
+  flex-basis: 830px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.catalog-items-all{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  padding-left: 70px;
+  margin-bottom: 45px;
+}
+
+.catalog-item{
+  flex-basis: 360px;
+}
+
+.sorting-filters{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+
+.catalog-pagination ul{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+
+  padding:25px;
+  margin: 0;
+}
+
+.catalog-pagination{
+  margin-left: 70px;
+}
+
+.main-footer.inner-page{
+  margin-top: 75px;
+}
+
+/*end styles for FLEX-grid*/
+
+
+
+
+
 
 a {
   text-decoration: none;
@@ -94,6 +350,17 @@ button.button{
 
 .main-header {
   width: 1160px;
+  min-height: 160px;
+  box-sizing: border-box;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:13px;
+  margin-bottom:50px;
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
   background-color: #f7e296;
 }
 
@@ -134,6 +401,11 @@ button.button{
 }
 
 .main-nav-user {
+  display: flex;
+  justify-content: space-between;
+
+  width: 500px;
+
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 36px;
@@ -151,6 +423,16 @@ ul.main-nav-site-catalog {
   text-transform: none;
 
   list-style: none;
+}
+
+ul.main-nav-site-catalog{
+  display: none;
+}
+
+.main-nav-site li.open-sub-menu:hover .main-nav-site-catalog{
+  position: absolute;
+  display: block;
+  padding-left:0;
 }
 
 .main-nav-site > li:not(.main-nav-site-catalog) {
@@ -192,6 +474,8 @@ ul.main-nav-site-catalog {
 /*start style for <main>*/
 
 .h1-title {
+  margin: 0px;
+
   font-family: "Gilroy", "Arial", sans-serif;
   font-size: 47px;
   line-height: 1.2;
@@ -266,11 +550,59 @@ ul.main-nav-site-catalog {
 /*end style for .slider-promo*/
 
 
+/*start style for .catalog-preview*/
+.catalog-preview ul {
+  list-style-type: none;
+}
+
+/*.catalog-preview li{
+  display: inline-block;
+  width: 160px;
+  vertical-align: top;
+}
+
+.catalog-preview li:not(:last-child){
+  margin-right: 40px;
+}
+
+Переделать на флексах, но если что, вот решение*/
+
+.catalog-preview a::before {
+  content: "";
+  display: inline-block;
+
+  margin-bottom: 16px;
+  width: 160px;
+  height: 160px;
+
+  background-color: #f7e296;
+}
+
+.catalog-preview li:hover a::before,
+.catalog-preview li:focus a::before {
+  background-color: #f0c52e;
+  cursor: pointer;
+}
+
+/*end style for .catalog-preview*/
+
+
 /*start style for .slider-services*/
 
 /*.slider-services{
   background-color: #e5e5e5;
-}фон перекрывает заливку в before для кнопок, пока не знаю как пофиксить*/
+}фон перекрывает заливку в before для кнопок, пока не знаю как пофиксить--через псевдоэлемент тоже задать если фон и z-index -2 задать например...*/
+
+ul.slider-services-controls{
+  margin-left: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+section.slider-services label.button{
+  width: 160px;
+}
 
 section.slider-services .button:active {
   width: 278px;
@@ -299,42 +631,6 @@ section.slider-services .button:active {
 }
 
 /*end style for .slider-services*/
-
-
-/*start style for .catalog-preview*/
-.catalog-preview ul {
-  list-style-type: none;
-}
-
-/*.catalog-preview li{
-  display: inline-block;
-  width: 160px;
-  vertical-align: top;
-}
-
-.catalog-preview li:not(:last-child){
-  margin-right: 40px;
-}
-
-Переделать на флексах, но если что, вот решение*/
-
-.catalog-preview a::before {
-  content: "";
-  display: inline-block;
-
-  width: 160px;
-  height: 160px;
-
-  background-color: #f7e296;
-}
-
-.catalog-preview li:hover a::before,
-.catalog-preview li:focus a::before {
-  background-color: #f0c52e;
-  cursor: pointer;
-}
-
-/*end style for .catalog-preview*/
 
 
 /*start style for .partners-dillers*/
@@ -374,18 +670,25 @@ img.partners-logo:hover {
   width: 260px;
 }
 
+/*end style for .about-us and .contacts*/
+
 /*end style for main*/
 
 
 /*style for <footer> .main-footer*/
 
 .main-footer {
+  margin-top: 90px;
+  height: 324px;
+
   background-color: #464646;
   color: #fff;
 }
 
 .main-footer ul {
     list-style-type: none;
+    margin-left: 0px;
+    padding-left: 0px;
 }
 
 .main-footer-logo {
@@ -548,9 +851,14 @@ form.filter {
 
 .filter ul{
   list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .filter fieldset {
+  margin-left: 0;
+  padding-left: 0;
+
   border-top: 1px solid #000;
   border-bottom: none;
   border-left: none;
@@ -572,6 +880,10 @@ form.filter {
   font-weight: 300;
   color: #000;
   letter-spacing: 0.01em;
+}
+
+.filter-button{
+  width: 200px;
 }
 /*end style for <aside> .filters*/
 
@@ -632,6 +944,7 @@ button.but-compare{
 
 
 /*start style for catalog-pagination*/
+
 .catalog-pagination{
   background-color: #ebebeb;
 }
@@ -671,3 +984,42 @@ button.but-compare{
 
 
 /*end style for INNER PAGE catalog.html*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*start style for */
+/*end style for */
+
+/*start style for */
+/*end style for */
+
+/*start style for */
+/*end style for */
+
+/*start style for */
+/*end style for */
+
+/*start style for */
+/*end style for */
+
+/*start style for */
+/*end style for */
+
+/*start style for */
+/*end style for */
+
+/*start style for */
+/*end style for */
