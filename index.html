@@ -2,42 +2,17 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title>Магазин товаров: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-<<<<<<< HEAD
-    <header class="main-header">
-      <nav class="main-nav flex-block">
-        <a class="main-header-logo" title="Логотип магазина Device">Device</a>
-        <div class="header-flex-row">
-          <form class="searching-form" method="get">
-            <label class="visually-hidden" for="search">Поиск по сайту</label>
-            <input class="search-field" id="search" type="search"  placeholder="Поиск по сайту" name="search">
-            <label class="visually-hidden" for="search-button">Найти товар</label>
-            <input class="search-button" id="search-button" type="submit" value="Найти">
-          </form>
-          <ul class="main-nav-user">
-            <li class="login-link">
-              <a href="authorization.html">Войти</a>
-            </li>
-            <li class="compare-link">
-              <a href="#">Сравнить</a>
-            </li>
-            <li class="basket-link">
-              <a href="#">Корзина</a>
-=======
     <div class="flex-container">
       <header class="main-header">
         <nav class="main-nav flex-block">
           <a class="main-header-logo" title="Логотип магазина Device">Device</a>
           <div class="header-flex-row">
-            <form class="searching-form" action="/catalog/">
+            <form class="searching-form" method="get" action="https://echo.htmlacademy.ru">
               <label class="visually-hidden" for="search">Поиск по сайту</label>
               <input class="search-field" id="search" type="search"  placeholder="Поиск по сайту" name="SEARCH">
               <label class="visually-hidden" for="search-button">Найти товар</label>
@@ -46,46 +21,52 @@
             <ul class="main-nav-user">
               <li class="login-link">
                 <a href="authorization.html">Войти</a>
->>>>>>> parent of e3b6972... Fix mistakes (first final defense)
               </li>
-          </ul>
-        </div>
-        <ul class="main-nav-site flex-block">
-          <li class="open-sub-menu">
-            <a href="#">Каталог товаров</a>
-            <ul class="main-nav-site-catalog">
-              <li>
-                <a href="#">Виртуальная реальность</a>
+              <li class="compare-link">
+                <a href="#">Сравнить</a>
               </li>
-              <li>
-                <a href="catalog.html">Моноподы для селфи</a>
-              </li>
-              <li>
-                <a href="#">Экшн-камеры</a>
-              </li>
-              <li>
-                <a href="#">Фитнесс браслеты</a>
-              </li>
-              <li>
-                <a href="#">Умные часы</a>
-              </li>
-              <li>
-                <a href="#">Квадрокоптеры</a>
+              <li class="basket-link">
+                <a href="#">Корзина</a>
               </li>
             </ul>
-          </li>
-          <li class="delivery-link">
-            <a href="delivery.html">Доставка</a>
-          </li>
-          <li class="guarantee-link">
-            <a href="guarantee.html">Гарантия</a>
-          </li>
-          <li class="contacts-link">
-            <a href="contacts.html">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+          </div>
+          <ul class="main-nav-site flex-block">
+            <li class="open-sub-menu">
+              <a href="#">Каталог товаров</a>
+              <ul class="main-nav-site-catalog">
+                <li>
+                  <a href="#">Виртуальная реальность</a>
+                </li>
+                <li>
+                  <a href="catalog.html">Моноподы для селфи</a>
+                </li>
+                <li>
+                  <a href="#">Экшн-камеры</a>
+                </li>
+                <li>
+                  <a href="#">Фитнесс браслеты</a>
+                </li>
+                <li>
+                  <a href="#">Умные часы</a>
+                </li>
+                <li>
+                  <a href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
+            </li>
+            <li class="delivery-link">
+              <a href="delivery.html">Доставка</a>
+              </li>
+            <li class="guarantee-link">
+              <a href="guarantee.html">Гарантия</a>
+              </li>
+            <li class="contacts-link">
+              <a href="contacts.html">Контакты</a>
+              </li>
+          </ul>
+        </nav>
+      </header>
+    </div><!--close div .flex-container-->
 
     <main class="main-container">
       <div class="flex-container">
@@ -146,7 +127,7 @@
                 <img src="img/slider-promo/copter.png" alt="Квадрокоптер огненный" title="Квадрокоптер огненный" width="526" height="322">
               </a>
               <div class="slider-promo-flex-combine">
-                <span class="slider-promo-slogan">Порхает как бабочка,<br> жалит как пчела!</span>
+                <span class="slider-promo-slogan">Порхает как бабочка, жалит как пчела!</span>
                 <p class="slider-promo-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
                 <a class="button slider-promo-read-more" href="#">Подробнее</a>
                 <table class="slider-promo-details">
@@ -224,20 +205,30 @@
       </section>
 
       <div class="flex-container">
-        <section class="partners-dillers flex-block">
+        <section class="partners-dillers">
           <h2 class="visually-hidden">Наши партнеры и поставщики</h2>
-          <a class="partners-logo-bg-1" href="http://partners.ru" target="_blank">
-            <img class="partners-logo" src="img/partners/dji.jpg" alt="Логотип компании DJI" title="Логотип компании DJI" width="260" height="100">
-          </a>
-          <a class="partners-logo-bg-2" href="http://partners.ru" target="_blank">
-            <img class="partners-logo" src="img/partners/sp-gadjets.jpg" alt="Логотип компании Sp Gadjets" title="Логотип компании Sp Gadjets" width="260" height="100">
-          </a>
-          <a class="partners-logo-bg-3" href="http://partners.ru" target="_blank">
-            <img class="partners-logo" src="img/partners/gopro.jpg" alt="Логотип компании Gopro" title="Логотип компании Gopro" width="260" height="100">
-          </a>
-          <a class="partners-logo-bg-4" href="http://partners.ru" target="_blank">
-            <img class="partners-logo" src="img/partners/vive.jpg" alt="Логотип компании Vive" title="Логотип компании Vive" width="260" height="100">
-          </a>
+          <ul class="partners-dillers-list flex-block">
+            <li>
+              <a class="partners-logo-bg-1" href="http://partners.ru" target="_blank">
+                <img class="partners-logo" src="img/partners/dji.jpg" alt="Логотип компании DJI" title="Логотип компании DJI" width="260" height="100">
+              </a>
+            </li>
+            <li>
+              <a class="partners-logo-bg-2" href="http://partners.ru" target="_blank">
+                <img class="partners-logo" src="img/partners/sp-gadjets.jpg" alt="Логотип компании Sp Gadjets" title="Логотип компании Sp Gadjets" width="260" height="100">
+              </a>
+            </li>
+            <li>
+              <a class="partners-logo-bg-3" href="http://partners.ru" target="_blank">
+                <img class="partners-logo" src="img/partners/gopro.jpg" alt="Логотип компании Gopro" title="Логотип компании Gopro" width="260" height="100">
+              </a>
+            </li>
+            <li>
+              <a class="partners-logo-bg-4" href="http://partners.ru" target="_blank">
+                <img class="partners-logo" src="img/partners/vive.jpg" alt="Логотип компании Vive" title="Логотип компании Vive" width="260" height="100">
+              </a>
+            </li>
+          </ul>
         </section>
 
         <div class="flex-combine-aboutus-conacts">
@@ -299,33 +290,22 @@
         </div>
         <div class="flex-col-3">
           <ul class="main-footer-nav-user">
-            <li class="login-link">
-              <a class="footer-login-link" href="authorization.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
-                Войти
-              </a>
+            <li class="footer-login-link">
+              <a class="footer-login-link" href="authorization.html">Войти</a>
             </li>
             <li class="footer-compare-link">
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
-                Сравнить
-              </a>
+              <a href="#">Сравнить</a>
             </li>
             <li class="footer-basket-link" >
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>
-                Корзина
-              </a>
+              <a href="#">Корзина</a>
             </li>
           </ul>
           <p class="main-footer-contacts-tel">
             <a href="tel:+78126660266">Тел.: +7(499)495-95-95</a>
           </p>
           <p class="main-footer-copyright">
-            <span class="visually-hidden">Разработано в HTML Academy:</span>
             <a href="https://htmlacademy.ru/intensive/htmlcss">
-              <svg xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09"><path fill="#FFC600" d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/></svg>
-              <span class="visually-hidden">HTML Academy</span>
+              <span class="visually-hidden">Разработано в HTML Academy:</span>
             </a>
           </p>
         </div>
@@ -335,10 +315,10 @@
     <section class="modal modal-contact-us">
       <h2 class="visually-hidden">Форма обратной связи</h2>
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
-      <form class="contact-form" action="mailto:katinikitina05@mail.ru" method="post">
+      <form class="contact-form" action="https://echo.htmlacademy.ru" method="post">
         <label>
           Ваше имя:
-          <input class="user-name" type="text" name="user-name" placeholder="Представьтесь, пожалуйста" required autofocus>
+          <input class="user-name" type="text" name="name" placeholder="Представьтесь, пожалуйста" required>
         </label>
         <label>
           Ваш e-mail:
@@ -346,7 +326,7 @@
         </label>
         <label class="textarea">
           Текст письма
-          <textarea class="field-message" id="message" name="message" placeholder="В свободной форме"></textarea>
+          <textarea class="field-message" id="message" name="message" placeholder="В свободной форме" required></textarea>
         </label>
         <button class="button" type="submit">Отправить</button>
       </form>
@@ -358,6 +338,5 @@
       <button class="modal-close" type="button"><span class="visually-hidden">Закрыть окно</span></button>
     </section>
 
-  <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
