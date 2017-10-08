@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensans.woff") format("woff"), url("fonts/opensans.woff2") format("woff2");
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/opensanslight.woff") format("woff"), url("fonts/opensanslight.woff2") format("woff2");
+  src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -16,7 +16,7 @@
   font-family: "Gilroy";
   src:
     local("Gilroy"),
-    url("../fonts/gilroyextrabold.woff") format("woff"), url("fonts/gilroyextrabold.woff2") format("woff2");
+    url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
@@ -25,7 +25,7 @@
   font-family: "Gilroy";
   src:
     local("Gilroy"),
-    url("../fonts/gilroylight.woff") format("woff"), url("fonts/gilroylight.woff") format("woff2");
+    url("../fonts/gilroylight.woff") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -42,6 +42,39 @@ body {
 
   background-color: #fff;
 }
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
 
 /*start styles for common FLEX-grid*/
 .flex-container {
@@ -82,33 +115,6 @@ body {
     width: auto;
 }*/
 
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  -webkit-clip-path: inset(100%);
-
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 
 .button {
   position: relative;
@@ -305,6 +311,8 @@ input.search-field:focus {
 }
 
 .search-button:active {
+  display: inline-block;
+  vertical-align: bottom;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1306,6 +1314,46 @@ button.contacts-modal {
 
 /*start style for .modal-contact-us*/
 
+@keyframes bounce {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  70% {
+    transform: translateX(30px);
+  }
+
+  90% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-contact-us {
   display: none;
 
@@ -1331,6 +1379,16 @@ button.contacts-modal {
     60px 0px 40px -60px rgba(0, 0, 0, 0.75),
     -60px 0px 40px -60px rgba(0, 0, 0, 0.75),
     0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .contact-form {
@@ -1516,7 +1574,7 @@ button.modal-close:active {
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 36px;
-  font-weight: 300;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.3);
   letter-spacing: 0.01em;
 }
